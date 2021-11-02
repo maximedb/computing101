@@ -1,4 +1,4 @@
 ## Eliza Example API
 
 ### Launch 
-```uvicorn simple_api:app --host 0.0.0.0 --port <PORT_NUMBER>```
+```uvicorn api:app --host 0.0.0.0 --port <PORT_NUMBER>```
