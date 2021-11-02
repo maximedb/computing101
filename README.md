@@ -5,7 +5,7 @@ The goal of the session is to introduce you to the world of servers and APIs. At
 ## Takeaways
 1. Discover the world of servers
 2. Learn about APIs
-3. Learn about the NLP API offered by [TextGain](https://textgain.com)
+3. Learn about [TextGain](https://textgain.com)
 
 ## 1. Connect to the server
 
