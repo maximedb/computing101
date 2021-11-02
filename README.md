@@ -55,7 +55,10 @@ def name():
 
 @app.post("/converse")
 def converse(conversation: Conversation):
-    return "You said: " + conversation.utterances[-1]
+    if len(conversation.utterances[-1]) > 0:
+        return "You said: " + conversation.utterances[-1]
+    else:
+        return "Hi!"
 ```
 You can copy-paste this code inside your `simple_api.py` file, or you can create a new one. You can then re-run this command `uvicorn simple_api:app --host 0.0.0.0  --port <PORT_NUMBER>`. If you created a new file, please update `simple_api` with the new name of your file.
 
@@ -74,7 +77,13 @@ We can now call our `/name` function like this:
 ```python
 import requests
 r = requests.get("http://167.99.12.243:<YOUR_PORT>/name")
-print(r.text)
+print(r.json())
+```
+Calling the `/converse` endpoint is a little different:
+```python
+import requests
+r = requests.post("http://167.99.12.243:<YOUR_PORT>/converse", json={"utterances": ["hi"]})
+print(r.json())
 ```
 
 ## 5. Integrate an external API into your chatbot
