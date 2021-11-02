@@ -47,11 +47,11 @@ app = FastAPI()
 @app.get("/")
 def index():
     return "hello world"
-    
+
 @app.get("/name")
 def name():
     return "C3PO"
-    
+
 @app.post("/converse")
 def converse(conversation: Conversation):
     return "You said: " + conversation.utterances[-1]
