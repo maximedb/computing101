@@ -21,6 +21,7 @@ def name():
 @app.post("/converse")
 def converse(conversation: Conversation):
     eliza.memory = []
+    answer = eliza.initial()
     for utterance in conversation.utterances:
         answer = eliza.respond(utterance)
     return answer
