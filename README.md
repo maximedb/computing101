@@ -34,7 +34,7 @@ Your API will have two mandatory endpoints:
 * `/name` will be a GET endpoint, and its only goal is to return the name of your chatbot.
 * `/converse` will be a POST endpoint, its goal is to reply to a running conversation.
 
-This is the blueprint. It has two additional functions (name and converse). The name function returns C3PO, and the converse function returns the last utterance of the conversation. 
+Your API now has two additional functions: name and converse. Users can call the name function to get the name of your bot, they can interact with your bot by using the converse function. At the moment, the converse function only copies the last utterance and appends *you said:* to it. 
 ```python
 from typing import List
 from fastapi import FastAPI
