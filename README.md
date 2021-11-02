@@ -62,7 +62,8 @@ def converse(conversation: Conversation):
 ```
 You can copy-paste this code inside your `simple_api.py` file, or you can create a new one. You can then re-run this command `uvicorn simple_api:app --host 0.0.0.0  --port <PORT_NUMBER>`. If you created a new file, please update `simple_api` with the new name of your file.
 
-You can test your current API by visiting `http://167.99.12.243:<PORT_NUMBER>/docs`
+You can test your current API by visiting `http://167.99.12.243:<PORT_NUMBER>/docs`.
+You can also interact visually with your chatbot using Streamlit: http://167.99.12.243:2000/
 
 ## 4. Call your chatbot from Python
 Now that we have a "functioning" chatbot, we need a way to interact with it programmatically.
