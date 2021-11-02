@@ -87,6 +87,13 @@ print(r.json())
 ```
 
 ## 5. Integrate an external API into your chatbot
-Our chatbot is pretty dumb at the moment! To improve the quality, we will integrate another state-of-the-art chatbot by calling its API. We will use [HuggingFace](https://huggingface.co/) for that.
+Our chatbot is pretty dumb at the moment! 
 
+There are several models we can integrate by using their API:
+* Eliza (easy): you can find a running API for Eliza at http://167.99.12.243:1000/docs
+* Blender (moderate/hard): integrate a Blender model into your chatbot: https://huggingface.co/facebook/blenderbot-1B-distill
+ 
+## 6. Execrice
+Our model only speaks English. Can you integrate the language identification API offered by [TextGain](https://www.textgain.com/) to detect if a new utterance is another language than English? If it is not in English, answer that you do not speak the identified language.
+[API documentation for Language Identification](https://devops.textgain.com/#tag/Identification/paths/~1language/get).
 
