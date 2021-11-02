@@ -30,5 +30,30 @@ def index():
 5. You can call your api by opening a browser window and visiting: `http://167.99.12.243:<YOUR_PORT_NUMBER>/`. This is the address of your API.
 
 ## 3. Develop your chatbot
+Your API will have two mandatory endpoints:
+* `/name` will be a GET endpoint, and its only goal is to return the name of your chatbot.
+* `/converse` will be a POST endpoint, its goal is to reply to a running conversation.
 
+This is the blueprint. It has two additional functions (name and converse). The name function returns C3PO, and the converse function returns the last utterance of the conversation. 
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
 
+class Conversation(BaseModel):
+    utterances: List[str]
+
+app = FastAPI()
+
+@app.get("/")
+def index():
+    return "hello world"
+    
+@app.get("/name")
+def name():
+    return "C3PO"
+    
+@app.post("/converse")
+def converse(conversation: Conversation):
+    return "You said: " + conversation.utterances[-1]
+```
+You can copy-paste this code inside your `simple_api.py` file, or you can create a new one. You can then re-run this command `uvicorn simple_api:app --host 0.0.0.0  --port <PORT_NUMBER>`. If you created a new file, please update `simple_api` with the new name of your file.
