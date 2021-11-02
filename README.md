@@ -36,6 +36,7 @@ Your API will have two mandatory endpoints:
 
 This is the blueprint. It has two additional functions (name and converse). The name function returns C3PO, and the converse function returns the last utterance of the conversation. 
 ```python
+from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -57,3 +58,5 @@ def converse(conversation: Conversation):
     return "You said: " + conversation.utterances[-1]
 ```
 You can copy-paste this code inside your `simple_api.py` file, or you can create a new one. You can then re-run this command `uvicorn simple_api:app --host 0.0.0.0  --port <PORT_NUMBER>`. If you created a new file, please update `simple_api` with the new name of your file.
+
+You can test your current API by visiting `http://167.99.12.243:<PORT_NUMBER>/docs`
