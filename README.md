@@ -76,13 +76,13 @@ Before making our first request to the chatbot, we need to know a few things:
 We can now call our `/name` function like this:
 ```python
 import requests
-r = requests.get("http://167.99.12.243:<YOUR_PORT>/name")
+r = requests.get("http://167.99.12.243:1000/name")
 print(r.json())
 ```
 Calling the `/converse` endpoint is a little different:
 ```python
 import requests
-r = requests.post("http://167.99.12.243:<YOUR_PORT>/converse", json={"utterances": ["hi"]})
+r = requests.post("http://167.99.12.243:1000/converse", json={"utterances": ["hi"]})
 print(r.json())
 ```
 
