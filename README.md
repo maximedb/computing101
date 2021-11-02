@@ -60,3 +60,8 @@ def converse(conversation: Conversation):
 You can copy-paste this code inside your `simple_api.py` file, or you can create a new one. You can then re-run this command `uvicorn simple_api:app --host 0.0.0.0  --port <PORT_NUMBER>`. If you created a new file, please update `simple_api` with the new name of your file.
 
 You can test your current API by visiting `http://167.99.12.243:<PORT_NUMBER>/docs`
+
+## 4. Integrate an external API
+Our chatbot is pretty dumb at the moment! To improve the quality, we will integrate another state-of-the-art chatbot by calling its API. We will use [HuggingFace](https://huggingface.co/) for that.
+
+
