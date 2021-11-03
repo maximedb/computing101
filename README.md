@@ -99,3 +99,9 @@ There are several models we can integrate by using their API:
 Our model only speaks English. Can you integrate the language identification API offered by [TextGain](https://www.textgain.com/) to detect if a new utterance is another language than English? If it is not in English, answer that you do not speak the identified language.
 [API documentation for Language Identification](https://devops.textgain.com/#tag/Identification/paths/~1language/get).
 
+```
+import requests
+r = requests.get("https://api.textgain.com/language", params={"q": "Hi there!", "key": "<ASK_FOR_THE_KEY>"})
+print(r.json())
+```
+
