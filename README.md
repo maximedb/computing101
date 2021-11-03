@@ -105,3 +105,6 @@ r = requests.get("https://api.textgain.com/language", params={"q": "Hi there!", 
 print(r.json())
 ```
 
+## 7. End
+Well done you connected to a live server and create your first chatbot. The server will be shutdown this evening, so copy-paste the stuff you want to keep.
+
