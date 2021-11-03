@@ -10,8 +10,8 @@ The goal of the session is to introduce you to the world of servers and APIs. At
 ## 1. Connect to the server
 
 1. Connect to the server using: https://sshwifty.herokuapp.com/
-2. Your username is the concatenation of the letter "u" and your student ID: u<STUDENT_ID>
-3. The password is the same for all accounts and will be displayed on the slides.
+2. Your username is written on the piece of paper you received.
+3. Your password is written on the piece of paper you received.
 
 ## 2. Create your first API
 ```python
