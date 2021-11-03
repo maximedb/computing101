@@ -55,7 +55,7 @@ def name():
 
 @app.post("/converse")
 def converse(conversation: Conversation):
-    if len(conversation.utterances[-1]) > 0:
+    if len(conversation.utterances) > 0:
         return "You said: " + conversation.utterances[-1]
     else:
         return "Hi!"
