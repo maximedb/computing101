@@ -83,7 +83,7 @@ print(r.json())
 Calling the `/converse` endpoint is a little different as it expects a POST request with some data:
 ```python
 import requests
-r = requests.post("http://167.99.12.243:1000/converse", json={"utterances": ["hi"]})
+r = requests.post("http://167.99.12.243:1000/converse", json={"utterances": ["how are you doing?"]})
 print(r.json())
 ```
 You can interact with Eliza using this online tool: http://167.99.12.243:2000
