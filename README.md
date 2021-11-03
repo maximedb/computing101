@@ -30,7 +30,7 @@ def index():
 5. You can call your api by opening a browser window and visiting: `http://167.99.12.243:<YOUR_PORT_NUMBER>/`. This is the address of your API.
 
 ## 3. Create your chatbot
-Your API will have two mandatory endpoints:
+Your API will expose two mandatory endpoints:
 * `/name` will be a GET endpoint, and its only goal is to return the name of your chatbot.
 * `/converse` will be a POST endpoint, its goal is to reply to a running conversation.
 
