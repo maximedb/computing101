@@ -66,7 +66,7 @@ You can test your current API by visiting `http://167.99.12.243:<PORT_NUMBER>/do
 You can also interact visually with your chatbot using Streamlit: http://167.99.12.243:2000/
 
 ## 4. Call an API from Python
-How do you interact with an (HTTP) API from Python? We made available an Eliza API that you can interact with. Eliza is one of the first chatbot released in the computational linguistics community in 1966. 
+How do you interact with an (HTTP) API from Python? We made available an Eliza API that you can interact with. Eliza is one of the first chatbot released in the computational linguistics community in 1966, click [here](https://github.com/wadetb/eliza/blob/master/p36-weizenabaum.pdf) for me info. 
 
 This chatbot is available at: `http://167.99.12.243:1000`. You can visit the documentation here: http://167.99.12.243:1000/docs
 It exposes two endpoints: `/name` and `/converse` 
