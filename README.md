@@ -94,6 +94,31 @@ Our chatbot is pretty dumb at the moment! Can we make it better by integrating 3
 There are several models we can integrate by using their API:
 * Eliza (easy): you can find a running API for Eliza at http://167.99.12.243:1000/docs. You can simply integrate the example from the previous section and replace `["hi"]` with conversation.utterances
 * Blender (hard/expert): integrate a Blender model into your chatbot: https://huggingface.co/facebook/blenderbot-1B-distill. Click on "deploy" and "accelerated inference".
+
+```python
+import requests
+from typing import List
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+class Conversation(BaseModel):
+    utterances: List[str]
+
+app = FastAPI()
+
+@app.get("/")
+def index():
+    return "hello world"
+
+@app.get("/name")
+def name():
+    return "C3PO"
+
+@app.post("/converse")
+def converse(conversation: Conversation):
+    r = requests.post("http://0.0.0.0:1000/converse", json={"utterances": conversation.utterances})
+    return r.json()
+```
  
 ## 6. Exercise 2: detect non-supported languages
 Our model only speaks English. Can you integrate the language identification API offered by [TextGain](https://www.textgain.com/) to detect if a new utterance is another language than English? If it is not in English, answer that you do not speak the identified language.
