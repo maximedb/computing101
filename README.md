@@ -89,7 +89,7 @@ print(r.json())
 You can interact with Eliza using this online tool: http://167.99.12.243:2000
 
 ## 5. Excercise 1: integrate an external API into your chatbot
-Our chatbot is pretty dumb at the moment! Can we make it better by integratinf 3rd party APIs?
+Our chatbot is pretty dumb at the moment! Can we make it better by integrating 3rd party APIs?
 
 There are several models we can integrate by using their API:
 * Eliza (easy): you can find a running API for Eliza at http://167.99.12.243:1000/docs. You can simply integrate the example from the previous section and replace `["hi"]` with conversation.utterances
