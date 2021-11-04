@@ -1,5 +1,7 @@
 # Computing101
 
+**⚠️ the server is now down ⚠️**
+
 The goal of the session is to introduce you to the world of servers and APIs. At the end of the session, you will have built your own chatbot and will host it on a live server.
 
 ## Takeaways
